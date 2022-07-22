@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PlatosService } from 'src/app/services/platos.service';
-import { WarehouseService } from 'src/app/services/warehouse.service';
 
 @Component({
   selector: 'app-detalle-plato',
@@ -11,7 +10,7 @@ import { WarehouseService } from 'src/app/services/warehouse.service';
 export class DetallePlatoComponent implements OnInit {
 
   plato: any;
-  constructor(private _service: PlatosService, private _route: ActivatedRoute, public wh:WarehouseService) { }
+  constructor(private _service: PlatosService, private _route: ActivatedRoute) { }
 
 
   ngOnInit(): void {

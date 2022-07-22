@@ -1,24 +1,20 @@
-<div class="container" style="max-width: 50%;">
+<div class="container d-flex justify-content-center">
 
-    <div class="row">
-        <div> VEGANOS {{wh.cantVeganos}} </div>
-        <div> Promedio Preparacion {{wh.promedioPreparacion}} </div>
-        <div> Promedio healthscore{{wh.promedioHealthScore}} </div>
-        <div> Precio total {{wh.precioTotal}} </div>
-    </div>
+    <div class="col col-sm-10 col-md-8 col-lg-6">
 
-
-    <!-- <div class="card text-left">
-        <img class="card-img-top" src={{plato.image}} alt="">
-        <div class="card-body">
-            <h4 class="card-title">{{plato.title}}</h4>
-            <div class="card-text">
-                <div> Precio: {{plato.pricePerServing}}</div>
-                <div> Tiempo de preparacion: {{plato.readyInMinutes}}</div>
-                <div> Health Score: {{plato.healthScore}}</div>
-                <div> Vegano: {{plato.vegan}}</div>
-                <div> Vegetariano: {{plato.vegetarian}}</div>
+        <div class="card text-left">
+            <img class="card-img-top" src={{plato?.image}} alt="">
+            <div class="card-body">
+                <h4 class="card-title">{{plato?.title}}</h4>
+                <div class="card-text">
+                    <div> Precio: {{plato?.pricePerServing}}</div>
+                    <div> Tiempo de preparacion: {{plato?.readyInMinutes}}</div>
+                    <div> Health Score: {{plato?.healthScore}}</div>
+                    <div> Vegano: {{plato?.vegan}}</div>
+                    <div> Vegetariano: {{plato?.vegetarian}}</div>
+                </div>
             </div>
-        </div>
-    </div> -->
+        </div> <!-- cierre card  -->
+
+    </div>
 </div>

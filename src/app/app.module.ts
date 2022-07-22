@@ -14,6 +14,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BuscadorPageComponent } from './pages/buscador-page/buscador-page.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { DetallePlatoComponent } from './components/detalle-plato/detalle-plato.component';
+import { AcumuladoMisplatosComponent } from './components/acumulado-misplatos/acumulado-misplatos.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { DetallePlatoComponent } from './components/detalle-plato/detalle-plato.
     HomePageComponent,
     BuscadorPageComponent,
     BuscadorComponent,
-    DetallePlatoComponent
+    DetallePlatoComponent,
+    AcumuladoMisplatosComponent
   ],
   imports: [
     BrowserModule,
