@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlatosService } from 'src/app/services/platos.service';
+import { WarehouseService } from 'src/app/services/warehouse.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,20 +9,10 @@ import { PlatosService } from 'src/app/services/platos.service';
 export class HomePageComponent implements OnInit {
 
   arrayPlatos: any = [];
-  constructor(private _service: PlatosService) { }
+  constructor(private _service: WarehouseService) { }
 
   ngOnInit(): void {
-  }
-
-  obtenerPlatos() {
-    // let busqueda: string = (<HTMLInputElement>document.getElementById('txtBuscar')).value;
-
-    this._service.obtenerPlatos("pasta").subscribe((data: any) => {
-      console.log(data);
-      this.arrayPlatos = data.results;
-      // data.results.forEach((plato: any) => {
-      // });
-    })
+    this.arrayPlatos = this._service.misPlatos;
   }
 
 }

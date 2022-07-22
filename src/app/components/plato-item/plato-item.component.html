@@ -13,12 +13,12 @@
         </div>
     </div>
     <div class="col">
-        <button type="button" class="btn btn-warning" (click)="verDetalles(plato.id)" >Ver detalles</button>
         <div *ngIf="isInMisPlatos; else templateName">
-            <button type="button" class="btn btn-danger">Eliminar</button>
+            <button type="button" class="btn btn-warning" (click)="verDetalles(plato.id)">Ver detalles</button>
+            <button type="button" class="btn btn-danger" (click)="eliminarPlato(plato)">Eliminar</button>
         </div>
         <ng-template #templateName>
-            <button type="button" class="btn btn-success">Agregar</button>
+            <button type="button" class="btn btn-success" (click)="agregarPlato(plato)">Agregar</button>
         </ng-template>
     </div>
 </div>
