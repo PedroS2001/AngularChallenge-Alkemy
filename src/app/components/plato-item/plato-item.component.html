@@ -1,6 +1,6 @@
-<div class="row d-flex justify-content-center align-items-center">
+<div class="row d-flex justify-content-center align-items-center sombreado p-3 m-3">
     <div class="col col-6 col-sm-4">
-        <img src="{{plato.image}}" width="100%" alt="">
+        <img src="{{plato.image}}" class="imagen" width="100%" alt="{{plato.title}} image">
     </div>
     <div class="col col-6 col-sm-5">
         <div class="col"> <b> {{plato.title}} </b> </div>
@@ -14,7 +14,7 @@
     </div>
     <div class="col col-12 col-sm-3 d-flex d-sm-block justify-content-center ">
         <div *ngIf="isInMisPlatos; else templateName">
-            <button type="button" class="btn btn-warning" (click)="verDetalles(plato.id)">Ver detalles</button>
+            <button type="button" class="btn btn-warning" (click)="verDetalles(plato.id)">Detalles</button>
             <button type="button" class="btn btn-danger" (click)="eliminarPlato(plato)">Eliminar</button>
         </div>
         <ng-template #templateName>
