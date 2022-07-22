@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class FormLoginComponent implements OnInit {
 
   public myForm!: FormGroup;
-  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) { }
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.myForm = this.fb.group({
@@ -30,10 +31,14 @@ export class FormLoginComponent implements OnInit {
     console.info('Valido', this.myForm.valid);
 
     if (this.myForm.valid) {
+      this.spinner.show('mySpinner');
+
       this.auth.obtenerToken(email, password).subscribe((data: any) => {
         localStorage.setItem('token', data.token);
         console.log(data.token);
+        this.spinner.hide('mySpinner');
       }, (err: any) => {
+        this.spinner.hide('mySpinner');
         console.log(err.error.error);
       })
     }
