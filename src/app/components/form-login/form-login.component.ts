@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { AuthService } from 'src/app/services/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-form-login',
@@ -37,12 +38,27 @@ export class FormLoginComponent implements OnInit {
         localStorage.setItem('token', data.token);
         console.log(data.token);
         this.spinner.hide('mySpinner');
+        this.router.navigate(['']);
       }, (err: any) => {
         this.spinner.hide('mySpinner');
         console.log(err.error.error);
+        Swal.fire({
+          title: "Error",
+          text: "Hay datos invalidos",
+          icon: 'error',
+          timer: 2000,
+          confirmButtonColor: '#d33'
+        });
       })
     }
     else {
+      Swal.fire({
+        title: "Error",
+        text: "Hay datos invalidos",
+        icon: 'error',
+        timer: 2000,
+        confirmButtonColor: '#d33'
+      });
     }
 
   }

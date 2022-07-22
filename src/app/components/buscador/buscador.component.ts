@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { PlatosService } from 'src/app/services/platos.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class BuscadorComponent implements OnInit {
 
   @Output() listaPlatos: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor(private _service: PlatosService) { }
+  constructor(private _service: PlatosService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
   }
@@ -18,8 +19,9 @@ export class BuscadorComponent implements OnInit {
 
   buscarPlatos() {
     let busqueda: string = (<HTMLInputElement>document.getElementById('txtBuscar')).value;
-
+    this.spinner.show('mySpinner');
     this._service.obtenerPlatos(busqueda).subscribe((data: any) => {
+      this.spinner.hide('mySpinner');
       this.listaPlatos.emit(data.results);
     })
   }
