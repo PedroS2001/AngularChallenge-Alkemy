@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlatosService {
 
-  private baseUrl: string = 'https://api.spoonacular.com/';
-  private apiKey: string = 'e100789518f2401bbf9ca8097f1b01be';
-  private apikeyMia: string = '9aaa6c381a064fcb853801ba4a41b2a5';
+  private baseUrl: string = environment.baseUrl;
+  private apiKey: string = environment.apiKey;
+  private apikeyMia: string = environment.apikeyMia;
 
   constructor(private httpClient: HttpClient) { }
 

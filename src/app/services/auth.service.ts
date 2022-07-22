@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import jwtDecode from 'jwt-decode';
 import { Router } from '@angular/router';
+import { WarehouseService } from './warehouse.service';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -11,8 +13,8 @@ export class AuthService {
 
   currentUser: any;
 
-  private urlLogin: string = 'http://challenge-react.alkemy.org/';
-  constructor(private httpClient: HttpClient, private router: Router) {
+  private urlLogin: string = environment.urlLogin;
+  constructor(private httpClient: HttpClient, private router: Router, private wh: WarehouseService) {
     this.iniciarSesion();
   }
 
@@ -28,6 +30,7 @@ export class AuthService {
     this.currentUser = null;
     localStorage.removeItem('token');
     this.router.navigate(['login']);
+    this.wh.vaciarPlatos();
   }
 
   iniciarSesion() {

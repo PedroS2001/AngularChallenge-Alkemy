@@ -82,5 +82,9 @@ export class WarehouseService {
     })
   }
 
+  vaciarPlatos() {
+    this.misPlatos = [];
+    this.calcularAcumulados();
+  }
 
 }
