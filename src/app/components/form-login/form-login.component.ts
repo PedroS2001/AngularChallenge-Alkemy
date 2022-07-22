@@ -37,11 +37,12 @@ export class FormLoginComponent implements OnInit {
       this.auth.obtenerToken(email, password).subscribe((data: any) => {
         localStorage.setItem('token', data.token);
         console.log(data.token);
+        this.auth.iniciarSesion();
         this.spinner.hide('mySpinner');
         this.router.navigate(['']);
       }, (err: any) => {
         this.spinner.hide('mySpinner');
-        Swal.fire({ 
+        Swal.fire({
           title: "Error",
           text: err.error.error,
           icon: 'error',

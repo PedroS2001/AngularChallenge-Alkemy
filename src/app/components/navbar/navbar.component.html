@@ -7,9 +7,19 @@
         </button>
         <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a>
+                <!-- <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a> -->
                 <a class="nav-link" routerLinkActive="active" routerLink="buscador">Buscar Plato</a>
             </div>
+            <div *ngIf="auth.currentUser" class="dropdown">
+                <span class="dropdown-toggle user" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{auth.currentUser}}
+                </span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item pedro" style="color: var(--brown);" (click)="cerrarSesion()">Cerrar sesion</a></li>
+                </ul>
+            </div>
         </div>
+
     </div>
 </nav>

@@ -1,11 +1,17 @@
-.navbar{
+.navbar {
     background-color: var(--brown);
 }
 
-.navbar a{
+.user,
+.navbar a {
     color: var(--orange);
+    cursor: pointer;
 }
 
-.active{
+.active {
     font-weight: 600;
+}
+
+.navbar-collapse {
+    justify-content: space-between;
 }

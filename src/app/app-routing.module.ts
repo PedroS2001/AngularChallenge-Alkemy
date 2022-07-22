@@ -9,7 +9,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent, title: 'ALaCarta - HOME', canActivate: [LoggedGuard], data: { animation: 'HomePage' } },
   { path: 'login', component: FormLoginComponent, title: 'ALaCarta - Login', data: { animation: 'LoginPage' } },
-  { path: 'buscador', component: BuscadorPageComponent, title: 'ALaCarta - Buscar Plato', canActivate: [LoggedGuard] },
+  { path: 'buscador', component: BuscadorPageComponent, title: 'ALaCarta - Buscar Plato', canActivate: [LoggedGuard], data: { animation: 'BuscadorPage' } },
   { path: 'detalles/:id', component: DetallePlatoComponent, title: 'ALaCarta - Detalles Plato', canActivate: [LoggedGuard], data: { animation: 'DetallePage' } },
 ];
 

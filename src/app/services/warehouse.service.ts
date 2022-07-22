@@ -79,7 +79,7 @@ export class WarehouseService {
       } else {
         this.noVegan++;
       }
-    });
+    })
   }
 
 
