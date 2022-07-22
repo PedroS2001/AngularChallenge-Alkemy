@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-plato-item',
@@ -9,9 +10,13 @@ export class PlatoItemComponent implements OnInit {
 
   @Input() plato: any;
   @Input() isInMisPlatos: boolean = false;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  verDetalles(id: any) {
+    this.router.navigate(['detalles/' + id]);
   }
 
 }

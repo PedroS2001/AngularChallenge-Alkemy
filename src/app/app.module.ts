@@ -13,6 +13,7 @@ import { PlatoItemComponent } from './components/plato-item/plato-item.component
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BuscadorPageComponent } from './pages/buscador-page/buscador-page.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
+import { DetallePlatoComponent } from './components/detalle-plato/detalle-plato.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     PlatoItemComponent,
     HomePageComponent,
     BuscadorPageComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    DetallePlatoComponent
   ],
   imports: [
     BrowserModule,

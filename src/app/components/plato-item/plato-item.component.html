@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="col">
-        <button type="button" class="btn btn-warning">Ver detalles</button>
+        <button type="button" class="btn btn-warning" (click)="verDetalles(plato.id)" >Ver detalles</button>
         <div *ngIf="isInMisPlatos; else templateName">
             <button type="button" class="btn btn-danger">Eliminar</button>
         </div>

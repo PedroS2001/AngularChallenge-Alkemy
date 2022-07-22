@@ -14,6 +14,10 @@ export class PlatosService {
 
   obtenerPlatos(busqueda: string) {
     return this.httpClient.get<any>(`${this.baseUrl}recipes/complexSearch?apiKey=${this.apiKey}&query=${busqueda}&addRecipeInformation=true&addRecipeNutrition=true`);
-
   }
+
+  detallesPlato(id: any) {
+    return this.httpClient.get<any>(`${this.baseUrl}recipes/${id}/information?apiKey=${this.apiKey}`);
+  }
+
 }
