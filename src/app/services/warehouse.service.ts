@@ -15,17 +15,20 @@ export class WarehouseService {
 
   constructor() { }
 
-  addPlato(plato: any) {
+  addPlato(plato: any): number {
     if (this.misPlatos.length < 4) {
       if (this.validarTipo(plato)) {
         this.misPlatos.push(plato);
         this.calcularAcumulados();
         console.log("Se agrego el plato");
+        return 1;
       } else {
         console.log("No puede haber mas de 2 platos veganos");
+        return -2;
       }
     } else {
       console.log("No puede haber mas de 4 platos");
+      return -1;
     }
   }
 

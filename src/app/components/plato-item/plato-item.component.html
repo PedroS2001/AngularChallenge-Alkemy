@@ -5,11 +5,11 @@
     <div class="col col-6 col-sm-5">
         <div class="col"> <b> {{plato.title}} </b> </div>
         <div class="col">
-            <div> Precio: {{plato.pricePerServing}}</div>
-            <div> Tiempo de preparacion: {{plato.readyInMinutes}}</div>
-            <div> Health Score: {{plato.healthScore}}</div>
-            <div> Vegano: {{plato.vegan}}</div>
-            <div> Vegetariano: {{plato.vegetarian}}</div>
+            <div> Precio: {{plato.pricePerServing | currency}}</div>
+            <div> Tiempo de preparacion: {{plato.readyInMinutes | number}}</div>
+            <div> Health Score: {{plato.healthScore | number}}</div>
+            <div> Vegano: {{plato.vegan | yesNo}}</div>
+            <div> Vegetariano: {{plato.vegetarian | yesNo}}</div>
         </div>
     </div>
     <div class="col col-12 col-sm-3 d-flex d-sm-block justify-content-center ">

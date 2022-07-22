@@ -41,10 +41,9 @@ export class FormLoginComponent implements OnInit {
         this.router.navigate(['']);
       }, (err: any) => {
         this.spinner.hide('mySpinner');
-        console.log(err.error.error);
-        Swal.fire({
+        Swal.fire({ 
           title: "Error",
-          text: "Hay datos invalidos",
+          text: err.error.error,
           icon: 'error',
           timer: 2000,
           confirmButtonColor: '#d33'

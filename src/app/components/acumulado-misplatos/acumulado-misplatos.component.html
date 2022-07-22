@@ -1,6 +1,10 @@
-<div class="row">
-    <div> VEGANOS {{wh.cantVeganos}} </div>
-    <div> Promedio Preparacion {{wh.promedioPreparacion}} </div>
-    <div> Promedio healthscore{{wh.promedioHealthScore}} </div>
-    <div> Precio total {{wh.precioTotal}} </div>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-6 col-md-3 "> Cantidad de veganos: {{wh.cantVeganos}} </div>
+        <div class="col-6 col-md-3 "> Tiempo promedio de preparacion: {{wh.promedioPreparacion | number}} </div>
+        <div class="col-6 col-md-3 "> Promedio HealthScore: {{wh.promedioHealthScore | number}} </div>
+        <div class="col-6 col-md-3 "> Precio total: {{wh.precioTotal | currency}} </div>
+    </div>
+
 </div>
