@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormLoginComponent } from './components/form-login/form-login.component';
+import { BuscadorPageComponent } from './pages/buscador-page/buscador-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
-  { path: '', component: FormLoginComponent, title: 'ALaCarta - Login' },
+  { path: '', component: HomePageComponent, title: 'ALaCarta - HOME' },
   { path: 'login', component: FormLoginComponent, title: 'ALaCarta - Login' },
+  { path: 'buscador', component: BuscadorPageComponent, title: 'ALaCarta - Buscar Plato' },
+
 ];
 
 @NgModule({

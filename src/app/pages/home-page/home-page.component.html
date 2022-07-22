@@ -1,0 +1,7 @@
+<p>home-page works!</p>
+
+<button (click)="obtenerPlatos()">Obtener platos</button>
+
+<div *ngFor="let item of arrayPlatos">
+    <app-plato-item [plato]="item" [isInMisPlatos]="true" ></app-plato-item>
+</div>

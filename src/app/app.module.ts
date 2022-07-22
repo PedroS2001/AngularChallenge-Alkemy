@@ -9,13 +9,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { PlatoItemComponent } from './components/plato-item/plato-item.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { BuscadorPageComponent } from './pages/buscador-page/buscador-page.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    PlatoItemComponent,
+    HomePageComponent,
+    BuscadorPageComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

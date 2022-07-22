@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col">
+        <img src="{{plato.image}}" width="100%" alt="">
+    </div>
+    <div class="col">
+        <div class="col"> <b> {{plato.title}} </b> </div>
+        <div class="col">
+            <div> Precio: {{plato.pricePerServing}}</div>
+            <div> Tiempo de preparacion: {{plato.readyInMinutes}}</div>
+            <div> Health Score: {{plato.healthScore}}</div>
+            <div> Vegano: {{plato.vegan}}</div>
+            <div> Vegetariano: {{plato.vegetarian}}</div>
+        </div>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-warning">Ver detalles</button>
+        <div *ngIf="isInMisPlatos; else templateName">
+            <button type="button" class="btn btn-danger">Eliminar</button>
+        </div>
+        <ng-template #templateName>
+            <button type="button" class="btn btn-success">Agregar</button>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<app-buscador (listaPlatos)="capturarListaPlatos($event)"></app-buscador>
+
+<div class="container" *ngFor="let item of arrayPlatos">
+    <app-plato-item [plato]="item" ></app-plato-item>
+</div>
