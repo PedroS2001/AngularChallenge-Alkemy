@@ -1,0 +1,63 @@
+.container-fluid {
+    position: relative;
+    background-image: url('https://img.freepik.com/foto-gratis/chef-cocinando-comida-cocina-restaurante_53876-67.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.myForm {
+    color: #DD9E32;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.form-header {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myForm .form-formulario {
+    width: 80%;
+}
+
+
+.myForm .form-formulario .form-group label {
+    font-weight: 600;
+}
+
+.myForm .form-formulario .form-group input {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: black;
+    padding-left: 1em;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #222222;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: all ease;
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}

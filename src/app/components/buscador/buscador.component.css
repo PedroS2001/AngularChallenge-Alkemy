@@ -1,0 +1,17 @@
+input{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+input:hover
+input:focus{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: all ease;
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}

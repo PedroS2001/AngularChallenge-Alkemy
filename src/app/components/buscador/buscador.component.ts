@@ -26,4 +26,10 @@ export class BuscadorComponent implements OnInit {
     })
   }
 
+  onKeyUp(event: any) {
+    if (event.keyCode == 13) {
+      this.buscarPlatos();
+    }
+  }
+
 }

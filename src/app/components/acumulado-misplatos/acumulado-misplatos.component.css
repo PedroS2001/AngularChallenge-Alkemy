@@ -3,3 +3,11 @@
         width: 100%;
     }
 }
+
+.pedro {
+    background-color: rgba(222, 154, 31, 0.5);
+    color: var(--brown);
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 0 0 5px 5px;
+}

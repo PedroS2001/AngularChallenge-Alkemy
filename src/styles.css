@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --brown: rgb(65, 56, 68);
+    --orange: rgb(238, 159, 12);
+    --crema: rgb(255, 231, 219);
+}
+
+body {
+    background-color: var(--crema);
+}
+
+
 .colored-toast.swal2-icon-success {
     background-color: #a5dc86 !important;
 }

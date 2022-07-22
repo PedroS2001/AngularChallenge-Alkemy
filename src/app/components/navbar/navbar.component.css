@@ -1,0 +1,11 @@
+.navbar{
+    background-color: var(--brown);
+}
+
+.navbar a{
+    color: var(--orange);
+}
+
+.active{
+    font-weight: 600;
+}
