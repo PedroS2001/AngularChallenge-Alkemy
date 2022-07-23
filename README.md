@@ -1,7 +1,7 @@
 
 # A La Carta - Angular challenge
 
-A brief description of what this project does and who it's for
+Proyecto hecho como challenge de angular para [Alkemy](https://www.alkemy.org/)
 
 
 ## Run Locally
